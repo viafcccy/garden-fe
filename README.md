@@ -1,4 +1,13 @@
 # garden-fe
+## profile
+- init project by create-vue: https://github.com/vuejs/create-vue
+- tech stack: typescrip vue3 vite
+- JUST RUN 👇
+```
+./run.sh
+```
+
+# from vue-create
 
 This template should help get you started developing with Vue 3 in Vite.
 
