@@ -3,12 +3,12 @@ import type { RouteRecordRaw } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 
 // 使用路由项目类型声明一个路由数组
-const ROUTES: Array<RouteRecordRaw> = [
+const ROUTES: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'home',
     // 同步组件
-    component: HomeView 
+    component: HomeView
   },
   {
     path: '/about',
@@ -17,7 +17,7 @@ const ROUTES: Array<RouteRecordRaw> = [
     // this generates a separate chunk (About.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     // 异步组件，路由懒加载
-    component: () => import('../views/AboutView.vue')
+    component: async () => await import('../views/AboutView.vue')
   }
 ]
 
