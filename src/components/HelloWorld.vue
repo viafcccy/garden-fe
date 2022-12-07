@@ -1,7 +1,7 @@
 <script setup lang="ts">
-defineProps<{
-  msg: string
-}>()
+defineProps({
+  msg: String
+})
 </script>
 
 <template>
@@ -32,6 +32,7 @@ h3 {
 }
 
 @media (min-width: 1024px) {
+
   .greetings h1,
   .greetings h3 {
     text-align: left;

@@ -1,4 +1,33 @@
 # garden-fe
+## Profile
+- init project by create-vue: https://github.com/vuejs/create-vue
+- tech stack: typescrip vue3 vite
+- JUST RUN 👇
+```
+./run.sh
+```
+
+## About Code Struct
+### Code Style
+- ./.editorconfig
+
+If VSCode, depending plugin: EditorConfig for Visual Studio Code.
+
+- ./.prettierrc
+
+If VSCode, depending plugin: VSCode Prettier.
+
+- **.eslintrc.cjs**
+
+## Others
+### Recommend VSCode Plugin
+- Volar
+- Vue VSCode Snippets
+- Auto Close Tag
+- Auto Rename Tag
+- ESLint for VSCode
+
+# The following comes from from vue-create
 
 This template should help get you started developing with Vue 3 in Vite.
 
