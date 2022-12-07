@@ -16,7 +16,7 @@ docker build -t garden_fe .
 echo "-------------------- deploying --------------------"
 docker stop garden_fe
 docker rm -f garden_fe
-docker run -d -p 80:80 --name garden_fe garden_fe
+docker run -d -p 80:80 --name garden_fe --restart=always garden_fe
 
 # display
 echo "Query IP..."
