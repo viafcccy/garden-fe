@@ -2,7 +2,10 @@
 
 # code build
 echo "-------------------- code building --------------------"
-npm run build
+# based on your resource
+# export NODE_OPTIONS="--max-old-space-size=1024"
+# you can build in server or using ./build.sh build in your develop PC etc.
+# npm run build
 
 # prepare
 echo "-------------------- removing --------------------"
