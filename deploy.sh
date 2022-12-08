@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# enter workdir
-cd ./docker
-
 # code build
 echo "-------------------- code building --------------------"
 # based on your resource
@@ -17,6 +14,8 @@ docker rmi garden_fe
 
 # image build
 echo "-------------------- image building --------------------"
+# enter workdir
+cd ./docker
 docker build -t garden_fe .
 
 # depoly
