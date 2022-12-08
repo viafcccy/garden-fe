@@ -1,12 +1,7 @@
 #!/bin/bash
 
-# enter workdir
-cd ./docker
-
 # code build
 echo "-------------------- code building --------------------"
-# based on your resource
-# export NODE_OPTIONS="--max-old-space-size=1024"
 npm run build
 
 # prepare
@@ -17,6 +12,8 @@ docker rmi garden_fe
 
 # image build
 echo "-------------------- image building --------------------"
+# enter workdir
+cd ./docker
 docker build -t garden_fe .
 
 # depoly
