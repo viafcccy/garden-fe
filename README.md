@@ -4,7 +4,7 @@
 - tech stack: typescrip vue3 vite
 - JUST RUN 👇
 ```
-./run.sh
+./deploy.sh
 ```
 
 ## About Code Struct
