@@ -1,6 +1,6 @@
 <template>
   <el-menu default-active="2" class="menu-vertical" :collapse="isCollapse" @open="handleOpen" @close="handleClose"
-    active-text-color="#1abc9c" background-color="#ecf0f1" text-color="#2c3e50">
+    active-text-color="#1abc9c" background-color="#ecf0f1" text-color="#2c3e50" :router="true">
     <el-sub-menu index="document">
       <template #title>
         <el-icon>
@@ -17,11 +17,17 @@
         <el-menu-item index="document-3">item three</el-menu-item>
       </el-menu-item-group>
     </el-sub-menu>
-    <el-menu-item index="2">
+    <el-menu-item index="recommend-site">
       <el-icon>
         <Link />
       </el-icon>
       <template #title>推荐站点</template>
+    </el-menu-item>
+    <el-menu-item index="about">
+      <el-icon>
+        <View />
+      </el-icon>
+      <template #title>关于</template>
     </el-menu-item>
     <el-menu-item v-if="isCollapse === true" @click="handleClickOpenMenu" index="clickOpen">
       <el-icon>

@@ -7,12 +7,8 @@
       </div>
     </el-menu-item>
     <div class="flex-grow" />
-    <el-menu-item index="github" @click="handleClickGithub"><img style="height: 3vh;" src="@/assets/img/github.svg"
-        alt="GitHub"></el-menu-item>
-    <el-sub-menu index="more">
-      <template #title>更多</template>
-      <el-menu-item index="more-about" :route="{ name: 'about' }">关于</el-menu-item>
-    </el-sub-menu>
+    <img style="height: 3vh;cursor: pointer;padding-right: 2vh;" src="@/assets/img/github.svg" alt="GitHub"
+      @click="handleClickGithub">
   </el-menu>
 </template>
 
@@ -30,19 +26,18 @@ const handleClickGithub = () => {
 
 <style lang="less" scoped>
 .header-menu {
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 100%;
 
   .logo-title__container {
-    display: flex;
-    align-items: center;
-
     .logo {
       height: 6vh;
     }
 
     .logo-title__text {
-      padding-left: 20px;
+      padding-left: 2vh;
       font-family: Impact, Charcoal, sans-serif;
       font-size: x-large;
     }

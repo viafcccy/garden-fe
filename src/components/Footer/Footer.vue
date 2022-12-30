@@ -5,13 +5,13 @@
         <el-icon>
           <UserFilled />
         </el-icon>
-        <span style="padding-left: 10px;">chenyu</span>
+        <span style="padding-left: 1vh;">chenyu</span>
         <el-divider direction="vertical" />
         <span>
           <el-icon>
             <Promotion />
           </el-icon>
-          <span style="padding-left: 10px;">
+          <span style="padding-left: 1vh;">
             <el-link href="mailto:hereisfcy@gmail.com" target="_blank">hereisfcy@gmail.com</el-link>
           </span>
         </span>
