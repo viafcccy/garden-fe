@@ -25,7 +25,11 @@ export default defineConfig({
     Components({
       resolvers: [ElementPlusResolver()],
     }),
-    eslintPlugin(),
+    eslintPlugin({
+      include: ['src/**/*.js', 'src/**/*.vue', 'src/**/*.jsx', 'src/**/*.ts'],
+      exclude: ['./node_modules/**'],
+      cache: false
+    }),
   ],
   resolve: {
     alias: {

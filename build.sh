@@ -10,4 +10,4 @@ npm run build
 
 # upload
 echo "-------------------- uploading --------------------"
-scp -r ../garden-fe/docker/dist  root@garden:/my-workspace/garden-fe/docker/dist
+scp -r ../garden-fe/docker/dist  root@garden:/my-workspace/garden-fe/docker

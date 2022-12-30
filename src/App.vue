@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 
+import Aside from './components/Aside'
 import Header from './components/Header'
 </script>
 
@@ -12,7 +13,7 @@ import Header from './components/Header'
       </el-header>
       <el-container>
         <el-aside class="app-aside">
-          Aside
+          <Aside />
         </el-aside>
         <el-container>
           <el-main class="app-main">
