@@ -1,7 +1,7 @@
 <template>
   <el-menu :default-active="activeIndex" class="header-menu" mode="horizontal" background-color="#ecf0f1"
-    text-color="#2c3e50" active-text-color="#1abc9c" :router="true" :ellipsis="false" @select="handleSelect">
-    <el-menu-item index="logo" :route="{ name: 'home' }">
+    text-color="#2c3e50" active-text-color="#1abc9c" :ellipsis="false" @select="handleSelect">
+    <el-menu-item index="logo">
       <div class="logo-title__container"><img class="logo" src="@/assets/logo.svg" alt="logo">
         <span class="logo-title__text">FIND YOUR FUN</span>
       </div>

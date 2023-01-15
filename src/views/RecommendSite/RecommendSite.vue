@@ -1,9 +1,9 @@
 <template>
-  <Menu></Menu>
+  关于
 </template>
 
 <script setup lang="ts">
-import Menu from './Menu.vue';
+//
 </script>
 
 <style lang="less" scoped>
