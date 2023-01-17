@@ -14,6 +14,15 @@ import eslintPlugin from 'vite-plugin-eslint';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    proxy: {
+      "/health": {
+        target: "http://localhost:8018",
+        // changeOrigin: true,
+        // rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+    },
+  },
   // ...
   plugins: [
     // ...
