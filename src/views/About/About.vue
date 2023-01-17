@@ -13,7 +13,6 @@ import { ElMessage } from 'element-plus'
 const backendHealthStatus = ref<BackendHealthCheck>(new BackendHealthCheck())
 
 const handleClickBackendHealthCheck = async () => {
-  backendHealthStatus.value = await GetBackendHealthCheck();
   try {
     backendHealthStatus.value = await GetBackendHealthCheck();
   } catch (err) {
