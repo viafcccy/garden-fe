@@ -2,8 +2,17 @@
 ## Profile
 - init project by create-vue: https://github.com/vuejs/create-vue
 - tech stack: typescrip vue3 vite
-- JUST RUN 👇
+### run
+- When build and deploy in same machine:
+JUST RUN 👇
 ```
+./deploy.sh
+```
+- When build and deploy in different machine:
+```
+// in build
+./build.sh
+// in deploy
 ./deploy.sh
 ```
 

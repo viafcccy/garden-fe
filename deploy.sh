@@ -22,7 +22,7 @@ docker build -t garden_fe .
 # depoly
 echo "-------------------- deploying --------------------"
 docker rm -f garden_fe
-docker run -d -p 80:80 --name garden_fe --restart=always garden_fe
+docker run -d -p 80:80 --name garden_fe --restart=always --link garden_be --net garden-frontend-network garden_fe
 
 # display
 echo "Query IP..."
