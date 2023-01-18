@@ -26,14 +26,14 @@
 
 <script setup lang="ts">
 const BasicInfo =
-  '# 方辰昱 (caven) \n \
+  '# caven \n \
   #### :email:&nbsp;&nbsp;&nbsp;邮箱：[hereisfcy@gmail.com](mailto:hereisfcy@gmail.com) \n \
   #### :star:&nbsp;&nbsp;&nbsp;Github：[viafcccy](https://github.com/viafcccy) \n \
   #### :black_nib:&nbsp;&nbsp;&nbsp;Linkedin：[Chenyu Fang](https://www.linkedin.com/in/chenyu-fang-2720a2250) \n \
-  #### 中南大学 \n \
+  #### :hourglass:&nbsp;&nbsp;&nbsp;中南大学 \n \
   - 自动化学院 \n \
   - 学士学位 \n \
-  - 2018.6 - 2022.9 \n \
+  - 2018/9 - 2022/6 \n \
   ### 技术栈 \n \
   - 前端开发：TypeScript、Vue3、ElementPlus \n \
   - 后端开发：Golang、GORM、GIN、MySQL、Redis、Kafka \n \
