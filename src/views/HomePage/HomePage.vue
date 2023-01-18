@@ -1,21 +1,30 @@
 <template>
   <el-row>
     <el-col :span="10">
-      <div>
-        <el-empty description="功能开发中..." />
+      <div class="left-container">
+        <div class="carousel">
+          <el-carousel :interval="4000" type="card" height="25vh" arrow="never">
+            <el-carousel-item v-for="item in 6" :key="item">
+              <div style="background-color: red;height: 25vh">
+                <h3 class="small justify-center" text="2xl">{{ item }}</h3>
+              </div>
+            </el-carousel-item>
+          </el-carousel>
+        </div>
+        <div>
+          <el-empty description="功能开发中..." />
+        </div>
       </div>
     </el-col>
     <el-col :span="14">
       <el-scrollbar height="86vh" always>
         <div class="right-container">
           <div class="article-filter">
-            <el-descriptions>
-              <el-descriptions-item label="排序">
-                <el-select v-model="value" class="m-2" placeholder="Select" size="large">
-                  <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-                </el-select>
-              </el-descriptions-item>
-            </el-descriptions>
+            <el-button-group>
+              <el-button round :icon="Flag">综合排序</el-button>
+              <el-button round :icon="Opportunity">最新发布</el-button>
+              <el-button round :icon="TrendCharts">最多点击</el-button>
+            </el-button-group>
           </div>
           <div class="article-list">
             <el-card class="article-card__item" shadow="hover">
@@ -37,6 +46,12 @@
               </el-descriptions>
             </el-card>
           </div>
+          <div class="article-pagination">
+            <el-pagination v-model:current-page="currentPage4" v-model:page-size="pageSize4"
+              :page-sizes="[100, 200, 300, 400]" :small="small" :disabled="disabled" :background="background"
+              layout="total, sizes, prev, pager, next, jumper" :total="400" @size-change="handleSizeChange"
+              @current-change="handleCurrentChange" />
+          </div>
         </div>
       </el-scrollbar>
     </el-col>
@@ -44,44 +59,35 @@
 </template>
 
 <script setup lang="ts">
+import { Flag, Opportunity, TrendCharts } from '@element-plus/icons-vue'
 import { ref } from 'vue'
 
-const value = ref('')
+const currentPage4 = ref(4)
+const pageSize4 = ref(100)
+const small = ref(false)
+const background = ref(false)
+const disabled = ref(false)
 
-const options = [
-  {
-    value: 'Option1',
-    label: 'Option1',
-  },
-  {
-    value: 'Option2',
-    label: 'Option2',
-  },
-  {
-    value: 'Option3',
-    label: 'Option3',
-  },
-  {
-    value: 'Option4',
-    label: 'Option4',
-  },
-  {
-    value: 'Option5',
-    label: 'Option5',
-  },
-]
+
+const handleSizeChange = (val: number) => {
+  console.log(`${val} items per page`)
+}
+const handleCurrentChange = (val: number) => {
+  console.log(`current page: ${val}`)
+}
 </script>
 
 <style lang="less" scoped>
 .right-container {
   border-left-style: solid;
   border-width: 0.5vh;
-  border-color: #1abc9c;
+  border-color: #409eff;
 
   .article-filter {
     margin-top: 1vh;
     display: flex;
     justify-content: center;
+
   }
 
   .article-list {
@@ -92,6 +98,18 @@ const options = [
       margin: 1vh 0;
       width: 80%;
     }
+  }
+
+  .article-pagination {
+    padding-top: 2vh;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.left-container {
+  .carousel {
+    margin: 2vh;
   }
 }
 </style>

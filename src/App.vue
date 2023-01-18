@@ -43,7 +43,7 @@ import Footer from './components/Footer'
 
 .app-main {
   min-height: 86vh;
-  padding: 0 1vh;
+  padding: 0;
   margin: 0;
 }
 

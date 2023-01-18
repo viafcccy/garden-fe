@@ -7,15 +7,21 @@
       </div>
     </el-menu-item>
     <div class="flex-grow" />
-    <img class="right-title__icon" src="@/assets/img/header-icon-github.svg" alt="GitHub" @click="handleClickGithub">
-    <img class="right-title__icon" src="@/assets/img/header-icon-avatar.svg" alt="GitHub" @click="handleClickAvatar">
+    <img class="right-title__icon" style="height: 3.6vh;" src="@/assets/img/header-icon-github.svg" alt="GitHub"
+      @click="handleClickGithub">
+    <img class="right-title__icon" style="height: 3.2vh;" src="@/assets/img/header-icon-avatar.svg" alt="GitHub"
+      @click="handleClickAvatar">
   </el-menu>
+  <LoginDialog :is-visible="isLoginDialogVisible" @update-is-visible="updateIsLoginDialogVisible"></LoginDialog>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import LoginDialog from '@/components/LoginDialog'
 
 const activeIndex = ref('logo')
+const isLoginDialogVisible = ref(false)
+
 const handleSelect = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)
 }
@@ -23,7 +29,11 @@ const handleClickGithub = () => {
   window.open("https://github.com/viafcccy", "_blank");
 }
 const handleClickAvatar = () => {
-  //
+  isLoginDialogVisible.value = true
+}
+
+const updateIsLoginDialogVisible = (isVisible: boolean) => {
+  isLoginDialogVisible.value = isVisible
 }
 </script>
 
@@ -48,9 +58,8 @@ const handleClickAvatar = () => {
   }
 
   .right-title__icon {
-    height: 3vh;
     cursor: pointer;
-    padding-right: 2vh;
+    margin-right: 3vh;
   }
 }
 
