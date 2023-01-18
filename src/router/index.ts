@@ -12,14 +12,12 @@ const router = createRouter({
 router.beforeEach((to, from) => {
   // 移动端判断
   const mobile = isMobile()
-  if (mobile && cookie.getCookie('isFirstVisit') !== 'true') {
+  if (mobile && cookie.getCookie('isMobileFirstVisit') !== 'false') {
     ElMessageBox.alert('为保证最佳体验，推荐使用 PC 端访问', '提示', {
       autofocus: false,
       confirmButtonText: '确认',
     })
-  }
-  if (cookie.getCookie('isFirstVisit') !== 'true') {
-    cookie.setCookie('isFirstVisit', 'true', 1)
+    cookie.setCookie('isMobileFirstVisit', 'false', 1)
   }
 })
 
