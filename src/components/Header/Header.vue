@@ -7,8 +7,8 @@
       </div>
     </el-menu-item>
     <div class="flex-grow" />
-    <img style="height: 3vh;cursor: pointer;padding-right: 2vh;" src="@/assets/img/github.svg" alt="GitHub"
-      @click="handleClickGithub">
+    <img class="right-title__icon" src="@/assets/img/header-icon-github.svg" alt="GitHub" @click="handleClickGithub">
+    <img class="right-title__icon" src="@/assets/img/header-icon-avatar.svg" alt="GitHub" @click="handleClickAvatar">
   </el-menu>
 </template>
 
@@ -21,6 +21,9 @@ const handleSelect = (key: string, keyPath: string[]) => {
 }
 const handleClickGithub = () => {
   window.open("https://github.com/viafcccy", "_blank");
+}
+const handleClickAvatar = () => {
+  //
 }
 </script>
 
@@ -42,6 +45,12 @@ const handleClickGithub = () => {
       font-size: x-large;
     }
 
+  }
+
+  .right-title__icon {
+    height: 3vh;
+    cursor: pointer;
+    padding-right: 2vh;
   }
 }
 

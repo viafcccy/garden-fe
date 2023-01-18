@@ -1,5 +1,7 @@
 <template>
-  关于
+  <div>
+    <el-empty description="功能开发中..." />
+  </div>
 </template>
 
 <script setup lang="ts">
