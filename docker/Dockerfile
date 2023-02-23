@@ -4,3 +4,5 @@ FROM nginx:latest
 COPY ./dist/ /usr/share/nginx/html/
 COPY ./config/nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY ./config/nginx/nginx.conf /etc/nginx/nginx.conf
+COPY ./ssl/garden.vin_bundle.crt /etc/nginx/garden.vin_bundle.crt
+COPY ./ssl/garden.vin.key /etc/nginx/garden.vin.key
