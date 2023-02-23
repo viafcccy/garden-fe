@@ -12,11 +12,14 @@
             <Promotion />
           </el-icon>
           <span style="padding-left: 1vh;">
-            <el-link href="mailto:hereisfcy@gmail.com" target="_blank">hereisfcy@gmail.com</el-link>
+            <el-link href="mailto:geekcaven@gmail.com" target="_blank">geekcaven@gmail.com</el-link>
           </span>
         </span>
       </div>
     </el-divider>
+  </div>
+  <div class="record-link">
+    <el-link href="https://beian.miit.gov.cn" target="_blank">粤 ICP 备 2023008016 号</el-link>
   </div>
 </template>
 
@@ -28,6 +31,16 @@
 .footer-content__container {
   display: flex;
   align-items: center;
-  height: 6vh;
+  height: 3vh;
+}
+
+.record-link {
+  display: flex;
+  justify-content: center;
+  height: 2vh;
+}
+
+:deep(.el-divider.el-divider--horizontal) {
+  margin: 0px;
 }
 </style>

@@ -5,7 +5,7 @@
         <div class="carousel">
           <el-carousel :interval="4000" type="card" height="25vh" arrow="never">
             <el-carousel-item v-for="item in 6" :key="item">
-              <div style="background-color: red;height: 25vh">
+              <div style="background-color: antiquewhite;height: 25vh">
                 <h3 class="small justify-center" text="2xl">{{ item }}</h3>
               </div>
             </el-carousel-item>
