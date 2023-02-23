@@ -79,9 +79,6 @@ const handleCurrentChange = (val: number) => {
 
 <style lang="less" scoped>
 .right-container {
-  border-left-style: solid;
-  border-width: 0.5vh;
-  border-color: #409eff;
 
   .article-filter {
     margin-top: 1vh;

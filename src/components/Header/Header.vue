@@ -7,9 +7,9 @@
       </div>
     </el-menu-item>
     <div class="flex-grow" />
-    <img class="right-title__icon" style="height: 3.6vh;" src="@/assets/img/header-icon-github.svg" alt="GitHub"
+    <img class="right-title__icon" style="height: 3.0vh;" src="@/assets/img/header-icon-github.svg" alt="GitHub"
       @click="handleClickGithub">
-    <img class="right-title__icon" style="height: 3.2vh;" src="@/assets/img/header-icon-avatar.svg" alt="GitHub"
+    <img class="right-title__icon" style="height: 2.4vh;" src="@/assets/img/header-icon-avatar.svg" alt="GitHub"
       @click="handleClickAvatar">
   </el-menu>
   <LoginDialog :is-visible="isLoginDialogVisible" @update-is-visible="updateIsLoginDialogVisible"></LoginDialog>
